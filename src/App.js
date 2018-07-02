@@ -1,21 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+
+import Home from './containers/Home';
+import Login from './containers/login/Login';
+
+import './utils/request';
+
+import 'normalize.css';
 import './App.css';
 
-class App extends Component {
+
+class Index extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+        <Router>
+          <Switch>
+            <Route path="/login" component={Login}></Route>
+            <Route path="/" component={Home}></Route>
+          </Switch>
+        </Router>
+    )
   }
 }
 
-export default App;
+export default Index;

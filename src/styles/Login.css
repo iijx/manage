@@ -1,0 +1,6 @@
+.login-page {
+    height: 100vh;
+    background-image: url('../assets/imgs/login-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
