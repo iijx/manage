@@ -44,7 +44,7 @@ class TinyDecisionIndex extends React.Component {
                     <Input name="userName" placeholder="请输入用户名" value={this.state.userName} onChange={this.userNameChange.bind(this)}/>
                     <Input name="password" placeholder="请输入密码" value={this.state.password} onChange={this.userNameChange.bind(this)}/>
                 </Modal>
-                <Card title="小决定管理" extra={<span onClick={ this.loginBtn.bind(this) }>登录</span>}>
+                <Card title="小决定管理" extra={<span onClick={ this.loginBtn.bind(this) }></span>}>
                     <Tabs defaultActiveKey="1">
                         <TabPane tab="用户列表" key="1">
                             <UserList />

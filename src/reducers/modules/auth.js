@@ -31,6 +31,7 @@ export const actions = {
         username: obj.username,
     }),
     login: (username, password) => {
+        console.log('auth login', username, password)
         return dispatch => {
             return $http.post( url.login(), { username, password }).then(res => {
                 localStorage.setItem('token', res.result.token);
@@ -38,6 +39,15 @@ export const actions = {
                 dispatch(actions._login(res.result))
             })
 
+        }
+    },
+    register: (username, password) => {
+        return dispatch => {
+            return $http.post(url.register(), {username, password}).then(res => {
+                localStorage.setItem('token', res.result.token);
+                localStorage.setItem('username', res.result.username);
+                dispatch(actions._login(res.result))
+            })
         }
     }
 }

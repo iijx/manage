@@ -20,6 +20,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "homepage": ".",
   "proxy": {
     "/blog/api/*": {
       "target": "http://localhost:3010",

@@ -91,7 +91,8 @@ class LoginForm extends Component {
         }
 
         else if (this.state.status === STATUS.REGISTER) {
-            this._register();
+            this.props.register(this.state.username, this.state.password);
+            // this._register();
         }
     }
     render() {
@@ -127,6 +128,8 @@ const mapStateToProps = ( state, props ) => {
     return state.auth;
 } 
 
+const mapDispatchToPropsData = {...bindActionCreators(authAction, () => {})};
+console.log('mapDispatchToPropsData', mapDispatchToPropsData);
 const mapDispatchToProps = dispatch => {
     return {
         ...bindActionCreators(authAction, dispatch)
