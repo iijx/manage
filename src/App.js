@@ -17,8 +17,8 @@ class Index extends React.Component {
     return (
         <Router>
           <Switch>
-            <Route path="/login" component={Login}></Route>
-            <Route path="/" component={Home}></Route>
+            <Route path="/manage/login" component={Login}></Route>
+            <Route path="/manage/" component={Home}></Route>
           </Switch>
         </Router>
     )

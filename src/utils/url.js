@@ -1,4 +1,4 @@
-const prefix = '/tinydec/api/';
+const prefix = '/tinydec/api';
 
 export default {
     login: () => `${prefix}/admin_login`,
