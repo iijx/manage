@@ -14,7 +14,7 @@ class Home extends React.Component {
   render() {
     const { auth, match } = this.props;
     if (auth && !auth.isLogin) {
-      return <Redirect to={{pathname: '/login', state: { from: this.props.location }}}/>
+      return <Redirect to={{pathname: '/manage/login', state: { from: this.props.location }}}/>
     }
     return (
         <Layout>
